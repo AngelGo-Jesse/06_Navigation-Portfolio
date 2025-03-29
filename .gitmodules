@@ -1,0 +1,9 @@
+[submodule "Layoutassignmanet-1"]
+	path = Layoutassignmanet-1
+	url = https://github.com/AngelGo-Jesse/Layoutassignmanet-1.git
+[submodule "iframe"]
+	path = iframe
+	url = https://github.com/AngelGo-Jesse/iframe.git
+[submodule "Responsive-Layout"]
+	path = Responsive-Layout
+	url = https://github.com/AngelGo-Jesse/Responsive-Layout.git
