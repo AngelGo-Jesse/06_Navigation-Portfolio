@@ -1,0 +1,402 @@
+/* Body Styles for var use makes it easier to uniform */
+body {
+  --bg-color: #635147;
+  --text-color: #F5F5DC;
+  --light-bg: #DCAE96;
+  --secondary-text: #ffffff;
+  --border-color: #010a16;
+  --accent-color: #3bbef6;
+  --accent-text: #ffffff;
+  --border-radius: 0.5rem;
+  
+/* Subject for change yung background. Look into videos bg using iframe?? */
+
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  line-height: 1.6;
+}
+
+/* for all  */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.min-h-screen {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.2s ease;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.section-title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.divider {
+  border-top: 2px dashed var(--border-color);
+  margin: 0.5rem 0;
+}
+
+/* For all buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius);
+  font-weight: 500;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.primary-btn {
+  background-color: transparent;
+  color: var(--accent-text);
+  border: 1px solid;
+}
+
+.primary-btn:hover {
+  opacity: 0.9;
+  background-color: rgba(225, 225, 225, 0.786);
+}
+
+.outline-btn {
+  background-color: transparent;
+  color: var(--border-color);
+  border: 1px solid var(--border-color);
+}
+
+.outline-btn:hover {
+  background-color: var(--light-bg);
+}
+
+/* Navigation */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.navbar .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.logo {
+  display: flex;
+  align-items: baseline;
+}
+
+.logo h1 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: black;
+}
+
+.powered-by {
+  font-size: 0.5rem;
+  font-weight: normal;
+  color: #808000;
+  margin-left: 0.25rem;
+}
+
+.nav-links {
+  display: none;
+  color: var(--border-color);
+}
+
+.social-icons {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-icons a {
+  font-size: 1.25rem;
+  color:var(--border-color);
+}
+
+.social-icons a:hover {
+  color: var(--accent-color);
+}
+
+/* Hero Section */
+.hero {
+  padding: 5rem 0;
+}
+
+.hero-content {
+  max-width: 36rem;
+}
+
+.hero h1 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+}
+
+.hero p {
+  font-size: 1.125rem;
+  color: var(--secondary-text);
+  margin-bottom: 2rem;
+}
+
+.hero .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.hero-content {
+  text-align: center;
+  max-width: 100%;
+  z-index: 2; /* Ensure text is above the background */
+}
+
+/* Abang para sa Legit na nagalaw na picture */
+.hero-image-container {
+  background-image: url('Card Pictures/codingpic1.jpg');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 8px;
+  width: 100%;
+  height: 250px; /* for mobile */
+}
+
+/* Projects Section */
+.projects {
+  padding: 4rem 0;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.card {
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: var(--text-color);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.5);
+}
+
+.card-image {
+  height: 200px;
+  overflow: hidden;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-header {
+  padding: 1.25rem 1.25rem 0.5rem;
+}
+
+.card-header h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: black;
+}
+
+.card-content {
+  padding: 0 1.25rem 1.25rem;
+  flex-grow: 1;
+}
+
+.card-content p {
+  color: black;
+}
+
+.card-footer {
+  padding: 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid var(--border-color);
+}
+
+/* About Section */
+.about {
+  padding: 5rem 0;
+  background-color: var(--light-bg);
+}
+
+.about-content {
+  max-width: 48rem;
+  margin: 0 auto;
+}
+
+.about-content p {
+  margin-bottom: 1.5rem;
+}
+
+/* Contact Section */
+.contact {
+  padding: 4rem 0;
+}
+
+.contact-content {
+  max-width: 36rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact-content p {
+  color: var(--secondary-text);
+  margin-bottom: 2rem;
+}
+
+.contact-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* Footer */
+.footer {
+  background-color: whitesmoke;
+  padding: 2rem 0;
+  margin-top: auto;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer-content p {
+  color: #000000;
+}
+
+.footer-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.footer-links a {
+  color: black;
+}
+
+.footer-links a:hover {
+  color: rgb(100, 182, 250);
+}
+
+/* ABANG PARA SA MODAL POP UP DI KO PA GETS */
+
+
+/* Media Queries */
+@media (min-width: 768px) {
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .nav-links a:hover {
+    color: var(--accent-color);
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+  }
+  
+  .project-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .footer-content {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 1024px) {
+  .project-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .hero h1 {
+    font-size: 3.5rem;
+  }
+}
+        /* Media query for larger screens */
+        @media (min-width: 768px) {
+          .hero .container {
+              flex-direction: row;
+              justify-content: space-between;
+              align-items: center;
+              text-align: left;
+          }
+          
+          .hero-content {
+              text-align: left;
+              max-width: 50%;
+          }
+          
+          .hero-image-container {
+              width: 45%;
+              height: 300px; /* Taller for desktop */
+          }
+      }
+      
+      @media (min-width: 1024px) {
+          .hero-image-container {
+              height: 350px; /* Even taller for larger screens */
+          }
+      }
